@@ -21,7 +21,7 @@ INSERT INTO "tasks" VALUES (default, 'Study SQL', 'Complete this exercise', now(
 INSERT INTO "tasks" (title, description) VALUES('Study PostgreSQL', 'Read all the documentation');
 SELECT * FROM "tasks" WHERE completed_at IS null;
 UPDATE "tasks" SET completed_at = now() WHERE title = 'Study SQL';
-SELECT tasks.title, tasks.description FROM "tasks" WHERE completed_at = null;
+SELECT tasks.title, tasks.description FROM "tasks" WHERE completed_at IS null;
 SELECT * FROM "tasks" ORDER BY created_at DESC;
 INSERT INTO "tasks" (title, description) VALUES ('mistake 1', 'a test entry');
 INSERT INTO "tasks" (title, description) VALUES ('mistake 2', 'another a test entry');
